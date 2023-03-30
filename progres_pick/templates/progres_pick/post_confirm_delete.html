@@ -1,0 +1,15 @@
+{% extends "progres_pick/base.html" %}
+
+{% load static %}
+
+{% block main %}
+
+<h1>Estas seguro de borrar el registro</h1>
+<div style="margin-top:40px">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Delete">
+    </form>
+</div>
+{% endblock %}
