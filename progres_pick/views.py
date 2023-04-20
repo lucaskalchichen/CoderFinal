@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from progres_pick.models import Post, Profile, Mensaje
+from progres_pick.models import Post, Profile, Mensaje , User
 from progres_pick.forms import PostForm, UsuarioForm
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
