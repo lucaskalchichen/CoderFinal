@@ -1,0 +1,13 @@
+{% extends "progres_pick/base.html" %}
+
+{% load static %}
+
+{% block main %}
+<div class="d-flex justify-content-center">
+    <div class="col col-8" style="text-align: center;">
+        <h1 class="mt-5">{{ post.nombre }}</h1>
+        <p><img height="256px" src="{{post.image_url}}"></p>
+        <p class="lead">{{ post.description}}</p>
+    </div>
+</div>
+{% endblock %}

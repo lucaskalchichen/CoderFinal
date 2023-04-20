@@ -120,3 +120,6 @@ class MensajeList(LoginRequiredMixin, ListView):
         import pdb; pdb.set_trace
         return Mensaje.objects.filter(destinatario=self.request.user).all()
     
+class MensajeDetalle(LoginRequiredMixin, DetailView):
+    model = Mensaje
+    

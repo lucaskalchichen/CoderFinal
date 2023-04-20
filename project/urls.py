@@ -18,7 +18,7 @@ from django.urls import path
 
 from progres_pick.views import ( index, PostList, 
 PostUpdate, PostDelete, PostCreate, PostSearch, Login, SignUp, Logout, 
-PostMineList, ProfileUpdate, ProfileCreate, MensajeCreate, MensajeDelete, MensajeList
+PostMineList, ProfileUpdate, ProfileCreate, MensajeCreate, MensajeDelete, MensajeList , MensajeDetalle
 )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -41,6 +41,8 @@ urlpatterns = [
     path('mensaje/list', MensajeList.as_view(), name="mensaje-list" ),
     path('mensaje/create', MensajeCreate.as_view(), name="mensaje-create" ),
     path('mensaje/<pk>/delete', MensajeDelete.as_view(), name="mensaje-delete"),
+    path('mensaje/<int:pk>/detalle/', MensajeDetalle.as_view(), name="mensaje-detalle"),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
